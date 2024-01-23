@@ -6,9 +6,12 @@ API proxy on Netlify Edge
 
 ### Deploy With Netlify
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yuri2peter/palm-netlify-proxy)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/yuri2peter/netlify-proxy)
 
 ## Usage
+
+Use `_target` to specify the target URL.
+Other parameters are passed to the target URL.
 
 ```
 curl https://{YOUR_DOMAIN}?_target=https://generativelanguage.googleapis.com/v1/models/gemini-pro:generateContent&key={YOUR_KEY} \
@@ -19,6 +22,14 @@ curl https://{YOUR_DOMAIN}?_target=https://generativelanguage.googleapis.com/v1/
    ]
 }'
 ```
+
+## Advantages
+
+- Simple and free.
+
+## Shortages
+
+- Netlify sets the single request timeout to 10 seconds, which is kind of short.
 
 ## Discussion
 
